@@ -1,0 +1,38 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           capture-process-stdout
+version:        0.1.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_capture_process_stdout
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , process
+    , text
+  default-language: Haskell2010
+
+test-suite capture-process-stdout-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_capture_process_stdout
+  hs-source-dirs:
+      test
+  build-depends:
+      base >=4.7 && <5
+    , capture-process-stdout
+    , hspec
+    , process
+    , silently
+    , text
+  default-language: Haskell2010

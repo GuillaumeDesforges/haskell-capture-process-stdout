@@ -1,0 +1,20 @@
+name: capture-process-stdout
+version: 0.1.0.0
+
+dependencies:
+  - base >= 4.7 && < 5
+  - process
+  - text
+
+library:
+  source-dirs: src
+
+tests:
+  capture-process-stdout-test:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - capture-process-stdout
+      - silently
+      - hspec
